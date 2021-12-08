@@ -1,5 +1,5 @@
 def main():
-    with open('input.txt') as f:
+    with open("input.txt") as f:
         text = f.read()
         array = [int(digit) for digit in text.splitlines()]
         size = len(array)
@@ -11,7 +11,9 @@ def main():
             idx_low_1, idx_high1 = i, i + window_size
             idx_low_2, idx_high_2 = idx_low_1 + 1, idx_high1 + 1
 
-            previous_sum, next_sum = sum(array[idx_low_1:idx_high1]), sum(array[idx_low_2:idx_high_2])
+            previous_sum, next_sum = sum(array[idx_low_1:idx_high1]), sum(
+                array[idx_low_2:idx_high_2]
+            )
 
             if previous_sum < next_sum:
                 counter += 1
@@ -21,5 +23,5 @@ def main():
     print(counter)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

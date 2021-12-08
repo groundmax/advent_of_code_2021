@@ -1,5 +1,5 @@
 def main():
-    with open('input.txt') as f:
+    with open("input.txt") as f:
         previous = int(f.readline())
         counter = 0
 
@@ -15,5 +15,5 @@ def main():
         print(counter)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
